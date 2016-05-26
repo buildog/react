@@ -12,8 +12,6 @@ const positionSuggestions = ({ state, props }) => {
 
     const left = 60, bottom = 40;
 
-    console.log(state);
-
     let transform;
     let transition;
 
