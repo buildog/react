@@ -1,0 +1,39 @@
+.root{
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+}
+
+.root form input{
+	border:0;
+	background-color: #FFF;
+  	box-shadow: none;
+	border-top:2px solid rgba(0,0,0,0.2);
+
+	width: 100%;
+	font-size: 1.2rem;
+	padding:30px 20px 30px 100px;
+	border-radius: 6px;
+	font-weight: bold;
+	border-radius: 0;
+	position: relative;
+	text-align: left;
+}
+
+.root form:after{
+	position: absolute;
+	z-index: 1;
+	content:"";
+	height: 100%;
+	width: 80px;
+	bottom:0px;
+	left:0px;
+	z-index: 10;
+	display: block;
+	background:url(./img/blockyc-white.svg) no-repeat #7332ea center center / contain;
+
+}
+
+
+

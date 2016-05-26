@@ -1,0 +1,114 @@
+.root{
+	color:#000;
+	text-align: center;
+   	display: table;
+   	width: 100%;
+   	height: 100%;
+   	position: absolute;
+   	top:0px;
+   	left: 0px;
+   	
+}
+
+.root:before{
+	position:absolute;
+	content:"";
+	height:30%;
+	width:100%;
+	left:0px;
+	top:0px;
+	background:url(./img/blockchain.svg) no-repeat bottom center;
+	background-size:60%;
+	opacity: 0.05;
+}
+
+.root form{
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+   text-align: center;
+   position: relative;
+   top:-10%;
+}
+
+
+.logo{
+	position: relative;
+	margin: 20px 0px 20px;
+	padding: 0;
+	width: auto;
+	text-align:center;
+	font-size:2rem;
+	letter-spacing: -0.1rem
+}
+
+.logo:before{
+	content:"";
+	height: 200px;
+	margin-bottom: -30px;
+	display: block;
+	background:url(./img/blockyc-black.svg) no-repeat center bottom / 200px;
+}
+
+.root form h2,
+.root form h3{
+	font-weight: 400;
+	margin:0;
+	line-height: 2rem;
+	font-size: 1.5rem;
+	letter-spacing: -0.05rem
+}
+
+.root form h2{
+	color:#464b54;
+	font-weight: 400;
+}
+
+.root form h3{
+	opacity: 0.3;
+	font-size: 1rem;
+}
+
+.root form input{
+	font-size: 1.2rem;
+	padding:30px 40px;
+	margin-top: 10px;
+	outline: none;
+	width: 80%;
+	max-width: 400px;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: #000;
+	color: #FFF
+
+}
+
+
+.root form button{
+	cursor: pointer;
+	background-color: transparent;
+	color:#90949c;
+	font-size: 1rem;
+	padding: 25px 0px;
+	border:0;
+	box-sizing: border-box;
+	width: 100%;
+	font-weight: 600;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	letter-spacing: -0.5px;
+}
+
+.root form button i{
+	color:#7332ea;
+}
+
+
+.root form small{
+	width: 100%;
+	font-weight: 400;
+	display: block;
+	font-size: 1rem;
+	opacity: 0.7
+}

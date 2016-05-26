@@ -1,0 +1,9 @@
+/* 
+colors.css 
+keep consistent coloring
+@value colors: "./colors.css";
+@value primary, purple from colors;
+*/
+
+@value primary: #000000;
+@value secondary: #7332ea; /* purple */

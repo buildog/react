@@ -1,0 +1,12 @@
+/* 
+breakpoints.css 
+used for media queries
+
+@value small as bp-small from "./breakpoints.css";
+==> @media bp-small { }
+
+*/
+
+@value small: (max-width: 599px);
+@value medium: (min-width: 600px) and (max-width: 959px);
+@value large: (min-width: 960px);

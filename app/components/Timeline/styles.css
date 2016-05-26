@@ -1,0 +1,230 @@
+.root{
+   	display: flex;
+   	flex-direction: column;
+   	width: 100%;
+   	height: 100%;
+   	position: relative;
+   	top:0px;
+   	left: 0px;
+   	font-size: 0.9rem;
+}
+
+
+.header{
+	display: flex;
+	position:relative;
+	font-size: 1rem;
+	border-bottom: 1px solid #e9ebee;
+   	padding: 10px 20px;
+   	height: 2.2rem;
+   	box-sizing: content-box;
+   	display: flex;
+
+   	.title{
+
+   		display: flex;
+   		flex-direction: column;
+
+   		&, *{
+   			flex:1;
+	    	text-overflow: ellipsis;
+	    	white-space: nowrap;
+	    	overflow: hidden;   		
+		}
+
+
+		h1{
+			font-size:inherit;
+			font-weight: 600;
+			letter-spacing: auto;
+			margin: 0;
+			color: #2e323b;
+			display: inline;
+
+			&:before{
+				content:"#";
+			}
+		}
+
+		a{	
+			
+			font-size: 0.8rem;
+			opacity: 0.5;
+		}
+	}
+
+	ul{
+		min-width: 500px;
+		margin: 0;
+		display: flex;
+		padding:0 0 0 20px;
+		list-style: none;
+		
+		li{
+			float: right;
+			padding: 0px 10px;
+			line-height: 2.2rem;
+
+			i{
+				opacity: 0.5;
+			}
+
+			&.flex{
+				flex:1;
+				padding: 0;
+			}
+
+			input{
+				width: 100%;
+				position: relative;
+				height: 30px;
+				font-size: .9rem;
+				padding: 20px 10px;
+				border-radius: 6px;
+				border:1px solid #e9ebee;
+
+			}	
+
+		}	
+	}
+
+
+
+}
+
+.root content{
+	display: flex;
+	flex-direction: row;
+	flex: 1; /* 100% height - header*/
+}
+
+.root sidebar{
+	flex:.7;
+}
+
+.root discuss{
+
+
+	flex:1; /* width for sidebar toogle*/
+	min-height: 0px;
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+
+	.messageContainer{
+		padding: 0px 20px;
+		margin-bottom: 20px;
+	}
+
+	ul{
+		position: relative;
+		flex:1; /* bottom form */
+		overflow-y: scroll;
+		margin: 10px 0px;
+		padding: 0;
+		list-style: none;
+		overflow-y: scroll;
+
+
+		ol{
+			list-style: none;
+			margin: none;
+			padding: 20px 0px;
+		}
+
+		li{
+			margin: 0;
+			margin-left: 20px;
+			padding:10px 10px 10px 55px;
+			position: relative;
+
+			.metas{
+				padding: 5px 20px 0px 0px;
+
+				strong{
+					line-height: 1rem;
+				}
+
+				span{
+					margin-left: 10px;
+					opacity: 0.5;
+					font-size: 0.7rem;
+					line-height: 1rem;
+				}
+
+				thumb{
+					position: absolute;
+					left: 0px;
+					width: 45px;
+					height: 45px;
+					background:url(./img/blockyc-white.svg) no-repeat #CCC center center / contain;
+					border-radius: 4px;
+					overflow: hidden;
+
+					img{
+						width: 100%
+					}
+				}
+
+
+			}
+
+			.message{
+
+				padding: 0;
+				margin: 0;
+
+				p{
+					margin: 0 0 5px 0;
+					line-height: 1.4rem;
+					font-size: 0.9rem;
+				}
+
+				img{
+					display: inline;
+					width: 1.4rem;
+					height: 1.4rem;
+					position: relative;
+					margin-bottom:-0.2rem;
+				}
+
+				a{
+					color:#7332ea;
+					font-weight: 600;
+					position: relative;
+					overflow: visible;
+
+				}
+
+
+			}
+
+			vote{
+				display: none;
+				width: 100%;
+				padding: 10px 0px;
+
+				button{
+					&.positive{
+						background-color: transparent;
+						border:none;
+					}
+				}
+
+			}
+
+
+		}
+	}
+}
+
+.root sidebar{
+	position: relative;
+	width: 380px;
+	min-width: 380px;
+	z-index: 10;
+	padding: 0px;
+
+}
+

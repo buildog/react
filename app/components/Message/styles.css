@@ -1,0 +1,148 @@
+.editor{
+  cursor: text;
+  padding: 14px 20px 14px 60px;
+  margin-bottom: 20px;
+  border:	2px solid #cccdce;
+  border-radius: 4px;
+  position: relative;
+
+  button{
+  	position: absolute;
+
+  	/* container borders */
+  	left: -2px;
+  	top:-2px;
+	height: calc(100% + 4px);
+  	
+  	display: table;
+  	padding: 0 0 2px 0; /*reset*/
+
+  	border:0;
+  	background: transparent;
+  	border:2px solid;
+  	border-color: inherit; 
+  	border-top-left-radius: 4px;
+  	border-bottom-left-radius: 4px;
+
+  	cursor: pointer;
+
+  	span{
+  		vertical-align: middle;
+  		display: table-cell;
+  		font-size: 1.6rem;
+  		padding: 0px 15px;
+  		color:#cccdce;
+  	}
+
+  	&:hover{
+  		border-color: #7332ea;
+  		background-color:#7332ea;
+  		span{
+  			color:#FFF;
+  		}
+  	}
+  }
+
+}
+
+.editor :global(.public-DraftEditor-content){
+  /*min-height: 140px; */
+}
+
+.emoji{
+  /* make sure the background the image is only shown once */
+  background-repeat: no-repeat;
+  /* move it a bit further down to align it nicer with the text */
+  vertical-align: middle;
+
+  /*
+  We need to limit the emoji width because it can be multiple characters
+  long if it is a 32bit unicode. Since the proper width depends on the font and
+  it's relationship between 0 and other characters it's not ideal. 1.85ch is not
+  the best value, but hopefully a good enough approximation for most fonts.
+  */
+  display: inline-block;
+  overflow: hidden;
+  max-width: 2.95ch;
+  /*
+  Needed for iOS rendering to avoid some icons using a lot of height without
+  actually needing it.
+  */
+  max-height: 1.4rem;
+  font-size: 1.4rem;
+  margin: -0.5rem 0rem;
+  line-height: inherit;
+}
+
+.emojiCharacter {
+  /*
+  Hide the original Emoji icon no matter what system it is. color: transparent
+  would have been nice to avoid the extra span, but it doesn't work on iOS.
+  */
+  opacity: 0;
+}
+
+
+.emojiSuggestionsEntry {
+  padding: 5px 10px 1px 10px;
+  transition: background-color 0.4s cubic-bezier(.27,1.27,.48,.56);
+}
+
+.emojiSuggestionsEntry:active {
+  background-color: #cce7ff;
+}
+
+.emojiSuggestionsEntryFocused{
+
+  padding: 5px 10px 1px 10px;
+  transition: background-color 0.4s cubic-bezier(.27,1.27,.48,.56);
+  background-color: #7332ea;
+  color:#FFF;
+  font-weight: 600
+}
+
+.emojiSuggestionsEntryText{
+  display: inline-block;
+  margin-left: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 368px;
+  font-size: 0.8em;
+  line-height: 2rem;
+}
+
+.emojiSuggestionsEntryIcon{
+  width: 2em;
+  height: 2em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  display: inline-block;
+}
+
+
+.emojiSuggestions{
+  border: 1px solid #cccdce;
+  margin-top: 1.75em;
+
+  min-width: 220px;
+  max-width: 440px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px 0px rgba(220,220,220,1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transform: scale(0);
+
+  position: fixed;
+  z-index: 10000;
+
+}
+
+
+
+
+
+
